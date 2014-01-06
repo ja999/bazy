@@ -1,4 +1,6 @@
 class SongsController < MuulibController
+  prepend_view_path 'app/views/blog'
+
   expose :song
   expose :songs
 

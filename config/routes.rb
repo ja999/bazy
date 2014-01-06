@@ -4,9 +4,11 @@ Bazy::Application.routes.draw do
 
   get 'muulib', to: 'muulib#index'
 
-  resources :artists
-  resources :albums
-  resources :songs
-  resources :labels
-  resources :genres
+  scope '/muulib' do
+    resources :artists
+    resources :albums
+    resources :songs
+    resources :labels
+    resources :genres
+  end
 end

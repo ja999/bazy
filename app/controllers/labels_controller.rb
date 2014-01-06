@@ -1,4 +1,6 @@
 class LabelsController < MuulibController
+  prepend_view_path 'app/views/blog'
+
   expose :label
   expose :labels
 

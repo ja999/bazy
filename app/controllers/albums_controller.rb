@@ -1,4 +1,6 @@
 class AlbumsController < MuulibController
+  prepend_view_path 'app/views/blog'
+
   expose :album
   expose :artists
 
