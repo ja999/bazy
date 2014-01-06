@@ -22,5 +22,7 @@ class ArtistsController < MuulibController
   end
 
   def destroy
+    artist.destroy
+    redirect_to muulib_path
   end
 end
