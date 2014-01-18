@@ -1,0 +1,11 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      .navbar-brand
+        = link_to 'MuuLib', '/'
+      %ul.nav.navbar-nav
+        %li{class: "#{active == 1 ? 'active' : ''}"}= link_to 'Artists', artists_path
+        %li{class: "#{active == 2 ? 'active' : ''}"}= link_to 'Albums', albums_path
+        %li{class: "#{active == 3 ? 'active' : ''}"}= link_to 'Songs', songs_path
+        %li{class: "#{active == 4 ? 'active' : ''}"}= link_to 'Genres', genres_path
+        %li{class: "#{active == 5 ? 'active' : ''}"}= link_to 'Labels', labels_path
