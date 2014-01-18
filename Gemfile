@@ -10,6 +10,7 @@ gem 'haml'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'better_errors'
 gem 'carrierwave'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
