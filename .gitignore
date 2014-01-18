@@ -16,3 +16,4 @@
 /RELEASE
 /tmp/*
 /vendor/bundle
+/log/*
