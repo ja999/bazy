@@ -1,5 +1,5 @@
 class GenresController < MuulibController
-  prepend_view_path 'app/views/blog'
+  prepend_view_path 'app/views/muulib'
 
   expose :genre
   expose :genres
