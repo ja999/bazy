@@ -4418,3 +4418,75 @@ ActionController::RoutingError (No route matches [GET] "/blog.atom"):
 
 
   Rendered /Users/Alex/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"input-group-addon"} instead. (called from block (4 levels) in <top (required)> at /Users/Alex/Documents/bazy/config/initializers/simple_form_boostrap.rb:50)
+DEPRECATION WARNING: Passing :tag, :class and others to use is deprecated. Please invoke b.use :label, :wrap_with => {:class=>"input-group-addon"} instead. (called from block (4 levels) in <top (required)> at /Users/Alex/Documents/bazy/config/initializers/simple_form_boostrap.rb:64)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-19 00:29:48 +0100
+Connecting to database specified by database.yml
+Processing by MuulibController#index as HTML
+  Rendered shared/_header.haml (3.5ms)
+  Rendered muulib/index.haml within layouts/application (9.1ms)
+Completed 200 OK in 78ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-19 00:29:48 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:48 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:48 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:48 +0100
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/muulib/albums" for 127.0.0.1 at 2014-01-19 00:29:50 +0100
+Processing by AlbumsController#index as HTML
+  Rendered shared/_header.haml (1.3ms)
+  Rendered muulib/albums/index.haml within layouts/application (3.5ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-19 00:29:50 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/muulib/artists" for 127.0.0.1 at 2014-01-19 00:29:51 +0100
+Processing by ArtistsController#index as HTML
+  Rendered shared/_header.haml (1.7ms)
+  Rendered muulib/artists/index.haml within layouts/application (4.2ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-19 00:29:51 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:51 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-19 00:29:51 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
