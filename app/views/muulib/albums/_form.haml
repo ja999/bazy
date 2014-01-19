@@ -1,0 +1,22 @@
+= simple_form_for album, html: { class: 'form-horizontal' } do |f|
+  .row
+    .col-lg-12
+      = f.input :title
+  .row
+    .col-lg-12
+      = f.input :date
+  .row
+    .col-lg-12
+      = f.input :type
+  .row
+    .col-lg-12
+      = f.input :description
+  .row
+    .col-lg-12
+      = f.input :rating
+  .row
+    .col-lg-12
+      = f.association :genres, collection: Genre.all
+  .row
+    .col-lg-12
+      = f.submit 'Save', class: 'btn btn-default'
