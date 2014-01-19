@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'better_errors'
 gem 'carrierwave'
 gem 'simple_form'
+gem 'acts_as_indexed'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
