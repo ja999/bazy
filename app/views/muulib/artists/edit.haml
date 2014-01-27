@@ -1,0 +1,11 @@
+.menu-offset
+= render partial: 'shared/header', locals: { active: 1 }
+.container
+  .row
+    .col-lg-6
+      = render partial: 'form'
+    .col-lg-1
+    .col-lg-5
+      .row.new-record
+        %h3 You're editing an artist to MuuLib...
+        %p ...remember to add all the data.

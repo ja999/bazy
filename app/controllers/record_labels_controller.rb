@@ -1,14 +1,17 @@
-class LabelsController < MuulibController
+class RecordLabelsController < MuulibController
   prepend_view_path 'app/views/muulib'
 
-  expose :label
-  expose :labels
+  expose :record_label
+  expose :record_labels
 
   def index
   end
 
+  def new
+  end
+
   def create
-    if label.save
+    if record_label.save
       redirect_to muulib_path
     else
       render :new
@@ -16,7 +19,7 @@ class LabelsController < MuulibController
   end
 
   def update
-    if label.save
+    if record_label.save
       redirect_to muulib_path
     else
       render :edit
@@ -24,7 +27,7 @@ class LabelsController < MuulibController
   end
 
   def destroy
-    label.destroy
+    record_label.destroy
     redirect_to muulib_path
   end
 end

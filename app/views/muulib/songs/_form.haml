@@ -1,0 +1,19 @@
+= simple_form_for song, html: { class: 'form-horizontal' } do |f|
+  .row
+    .col-lg-12
+      = f.input :title
+  .row
+    .col-lg-12
+      = f.input :number
+  .row
+    .col-lg-12
+      = f.input :rating
+  .row
+    .col-lg-12
+      = f.input :artist, collection: Artist.all, prompt: "Choose an Artist"
+  .row
+    .col-lg-12
+      = f.input :album, collection: Album.all, prompt: "Choose an Artist"
+  .row
+    .col-lg-12
+      = f.submit 'Save', class: 'btn btn-default'

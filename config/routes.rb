@@ -8,7 +8,7 @@ Bazy::Application.routes.draw do
     resources :artists
     resources :albums
     resources :songs
-    resources :labels
+    resources :record_labels
     resources :genres
   end
 end

@@ -12,6 +12,8 @@ gem 'better_errors'
 gem 'carrierwave'
 gem 'simple_form'
 gem 'acts_as_indexed'
+gem 'country_select'
+gem 'binding_of_caller'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

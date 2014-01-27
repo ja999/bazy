@@ -7,16 +7,25 @@
       = f.input :date
   .row
     .col-lg-12
-      = f.input :type
+      = f.input :format
   .row
     .col-lg-12
-      = f.input :description
+      = f.input :description, as: :text
   .row
     .col-lg-12
       = f.input :rating
   .row
     .col-lg-12
       = f.association :genres, collection: Genre.all
+  .row
+    .col-lg-12
+      = f.input :artist, collection: Artist.all, prompt: "Choose an Artist"
+  .row
+    .col-lg-12
+      = f.input :label, collection: RecordLabel.all, prompt: "Choose a Label"
+  .row
+    .col-lg-12
+      = f.association :songs, collection: Song.all
   .row
     .col-lg-12
       = f.submit 'Save', class: 'btn btn-default'
