@@ -10,10 +10,10 @@
       = f.input :rating
   .row
     .col-lg-12
-      = f.input :artist, collection: Artist.all, prompt: "Choose an Artist"
+      = f.association :artist
   .row
     .col-lg-12
-      = f.input :album, collection: Album.all, prompt: "Choose an Artist"
+      = f.association :album
   .row
     .col-lg-12
       = f.submit 'Save', class: 'btn btn-default'

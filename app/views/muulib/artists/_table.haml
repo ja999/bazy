@@ -1,0 +1,12 @@
+.admin.container
+  .row
+    .col-lg-10
+      .panel.panel-default
+        .panel-heading= "#{params[:controller].capitalize} index"
+        .panel-body
+          - artists.each do |f|
+            .panel-body
+              = f.name
+              =link_to 'Edit', edit_artist_path(f), class: 'btn btn-default context-btn'
+              =link_to 'Destroy', artist_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
+              %hr.featurette-divider

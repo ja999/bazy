@@ -1,6 +1,5 @@
 .sidebar-offcanvas#sidebar{ role: 'navigation' }
 	.list-group
-		= link_to 'Index', '#', class: 'list-group-item'
-		= link_to 'New', '#', class: 'list-group-item'
-		= link_to 'Add', '#', class: 'list-group-item'
-		= link_to 'Search', '#', class: 'list-group-item'
+		= link_to "Index #{params[:controller]}", "/muulib/#{params[:controller]}", class: 'list-group-item'
+		= link_to "New #{params[:controller].singularize}", "/muulib/#{params[:controller]}/new", class: 'list-group-item'
+		= link_to "Search #{params[:controller]}", '#', class: 'list-group-item'
