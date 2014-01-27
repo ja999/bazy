@@ -1,7 +1,8 @@
 = render partial: 'shared/header', locals: { active: 2 }
 .menu-offset
 .container
+  .col-lg-2
+    = render partial: 'shared/side'
   .col-lg-10
     tutaj zawartosc
-  .col-lg-2
-    tutaj menu
+= render partial: 'shared/footer'
