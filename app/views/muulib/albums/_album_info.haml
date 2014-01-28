@@ -1,0 +1,9 @@
+= album.title
+= album.date
+= album.format
+= album.description
+= album.rating
+= album.record_label.name
+- album.songs.each do |s|
+  = s.number
+  = s.title
