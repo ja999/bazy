@@ -1,12 +1,25 @@
 .admin.container
   .row
     .col-lg-10
+      %tr
+        %td siema
+        %td simea
       .panel.panel-default
         .panel-heading= "#{params[:controller].capitalize} index"
         .panel-body
-          - albums.each do |f|
-            .panel-body
-              = f.title
-              =link_to 'Edit', edit_album_path(f), class: 'btn btn-default context-btn'
-              =link_to 'Destroy', album_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
-              %hr.featurette-divider
+          %table{ class: 'table table-striped table-hover' }
+            %tr
+              %td Title
+              %td Date
+              %td Format
+              %td Rating
+              %td Edit
+              %td Destroy
+            - albums.each do |f|
+              %tr
+                %td= link_to f.title, album_path(f)
+                %td= f.date
+                %td= f.format
+                %td= f.rating
+                %td=link_to 'Edit', edit_album_path(f), class: 'btn btn-default context-btn'
+                %td=link_to 'Destroy', album_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
