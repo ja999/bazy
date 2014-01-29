@@ -1,10 +1,21 @@
-.container
-  = album.title
-  = album.date
-  = album.format
-  = album.description
-  = album.rating
-  = album.record_label.name
-  - album.songs.each do |s|
-    = s.number
-    = s.title
+.container.album-show
+  .col-lg-4
+    .row
+      = album.title
+    .row
+      = album.date
+    .row
+      = album.format
+    .row
+      = album.rating
+    .row
+      = album.record_label.name
+  .col-lg-4
+    - album.songs.order('number').each_with_index do |s, index|
+      .row{class: "#{index % 2 == 0 ? 'song-left' : 'song-right'}"}
+        = s.number
+        = s.title
+.container.album-desc
+  .col-lg-8
+    = album.description
+
