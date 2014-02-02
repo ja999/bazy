@@ -14,7 +14,7 @@
       .pull-right= "#{album.rating} / 10"
     .row
       Record label:
-      .pull-right= album.record_label.name
+      .pull-right= album.record_label.name if album.record_label.present?
   .col-lg-4
     %table{ class: 'table table-striped table-hover' }
       %tr

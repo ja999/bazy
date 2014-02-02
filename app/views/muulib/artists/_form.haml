@@ -13,10 +13,7 @@
       = f.input :description
   .row
     .col-lg-12
-      = f.association :albums, collection: Album.all
-  .row
-    .col-lg-12
-      = f.association :songs, collection: Song.all
+      = f.association :albums, collection: Album.where(artist_id: nil || artist.id)
   .row
     .col-lg-12
       = f.submit 'Save', class: 'btn btn-default'
