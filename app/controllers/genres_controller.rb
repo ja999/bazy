@@ -9,7 +9,7 @@ class GenresController < MuulibController
 
   def create
     if genre.save
-      redirect_to muulib_path
+      redirect_to genres_path
     else
       render :new
     end
@@ -17,7 +17,7 @@ class GenresController < MuulibController
 
   def update
     if genre.save
-      redirect_to muulib_path
+      redirect_to genres_path
     else
       render :edit
     end
@@ -25,6 +25,6 @@ class GenresController < MuulibController
 
   def destroy
     genre.destroy
-    redirect_to muulib_path
+    redirect_to genres_path
   end
 end

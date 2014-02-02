@@ -9,7 +9,7 @@ class ArtistsController < MuulibController
 
   def create
     if artist.save
-      redirect_to muulib_path
+      redirect_to artists_path
     else
       render :new
     end
@@ -17,7 +17,7 @@ class ArtistsController < MuulibController
 
   def update
     if artist.save
-      redirect_to muulib_path
+      redirect_to artists_path
     else
       render :edit
     end
@@ -25,6 +25,6 @@ class ArtistsController < MuulibController
 
   def destroy
     artist.destroy
-    redirect_to muulib_path
+    redirect_to artists_path
   end
 end

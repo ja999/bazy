@@ -9,7 +9,7 @@ class AlbumsController < MuulibController
 
   def create
     if album.save
-      redirect_to muulib_path
+      redirect_to albums_path
     else
       render :new
     end
@@ -17,7 +17,7 @@ class AlbumsController < MuulibController
 
   def update
     if album.save
-      redirect_to muulib_path
+      redirect_to albums_path
     else
       render :edit
     end
@@ -25,6 +25,6 @@ class AlbumsController < MuulibController
 
   def destroy
     album.destroy
-    redirect_to muulib_path
+    redirect_to albums_path
   end
 end

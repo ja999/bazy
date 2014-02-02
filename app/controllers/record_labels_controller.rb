@@ -12,7 +12,7 @@ class RecordLabelsController < MuulibController
 
   def create
     if record_label.save
-      redirect_to muulib_path
+      redirect_to record_labels_path
     else
       render :new
     end
@@ -20,7 +20,7 @@ class RecordLabelsController < MuulibController
 
   def update
     if record_label.save
-      redirect_to muulib_path
+      redirect_to record_labels_path
     else
       render :edit
     end
@@ -28,6 +28,6 @@ class RecordLabelsController < MuulibController
 
   def destroy
     record_label.destroy
-    redirect_to muulib_path
+    redirect_to record_labels_path
   end
 end

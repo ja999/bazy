@@ -9,7 +9,7 @@ class SongsController < MuulibController
 
   def create
     if song.save
-      redirect_to muulib_path
+      redirect_to songs_path
     else
       render :new
     end
@@ -17,7 +17,7 @@ class SongsController < MuulibController
 
   def update
     if song.save
-      redirect_to muulib_path
+      redirect_to songs_path
     else
       render :edit
     end
@@ -25,6 +25,6 @@ class SongsController < MuulibController
 
   def destroy
     song.destroy
-    redirect_to muulib_path
+    redirect_to songs_path
   end
 end
