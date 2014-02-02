@@ -1,21 +1,41 @@
 .container.album-show
+  .col-lg-4.well.well-lg
+    .row
+      Title:
+      .pull-right= album.title
+    .row
+      Release date:
+      .pull-right= album.date
+    .row
+      Format:
+      .pull-right= album.format
+    .row
+      Rating:
+      .pull-right= "#{album.rating} / 10"
+    .row
+      Record label:
+      .pull-right= album.record_label.name
   .col-lg-4
-    .row
-      = album.title
-    .row
-      = album.date
-    .row
-      = album.format
-    .row
-      = album.rating
-    .row
-      = album.record_label.name
+    %table{ class: 'table table-striped table-hover' }
+      %tr
+        %td No.
+        %td Title
+      - album.songs.order('number').each_with_index do |s, index|
+        - if index % 2 == 0
+          %tr
+            %td= s.number
+            %td= s.title
   .col-lg-4
-    - album.songs.order('number').each_with_index do |s, index|
-      .row{class: "#{index % 2 == 0 ? 'song-left' : 'song-right'}"}
-        = s.number
-        = s.title
+    %table{ class: 'table table-striped table-hover' }
+      %tr
+        %td No.
+        %td Title
+      - album.songs.order('number').each_with_index do |s, index|
+        - if index % 2 == 1
+          %tr
+            %td= s.number
+            %td= s.title
 .container.album-desc
-  .col-lg-8
+  .col-lg-4.well.well-lg
     = album.description
 
