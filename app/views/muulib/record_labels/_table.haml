@@ -1,12 +1,16 @@
-.admin.container
+.container
   .row
     .col-lg-10
-      .panel.panel-default
-        .panel-heading= "#{params[:controller].capitalize} index"
-        .panel-body
+      .panel-body
+        %table{ class: 'table table-striped table-hover' }
+          %tr
+            %td Name
+            %td Est.
+            %td Edit
+            %td Destroy
           - record_labels.each do |f|
-            .panel-body
-              = f.name
-              =link_to 'Edit', edit_record_label_path(f), class: 'btn btn-default context-btn'
-              =link_to 'Destroy', record_label_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
-              %hr.featurette-divider
+            %tr
+              %td= link_to f.name, record_labels_path(f)
+              %td= f.established
+              %td=link_to 'Edit', edit_record_label_path(f), class: 'btn btn-default context-btn'
+              %td=link_to 'Destroy', record_labels_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'

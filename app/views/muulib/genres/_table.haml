@@ -1,12 +1,14 @@
-.admin.container
+.container
   .row
-    .col-lg-10
-      .panel.panel-default
-        .panel-heading= "#{params[:controller].capitalize} index"
-        .panel-body
+    .col-lg-6
+      .panel-body
+        %table{ class: 'table table-striped table-hover' }
+          %tr
+            %td Name
+            %td Edit
+            %td Destroy
           - genres.each do |f|
-            .panel-body
-              = f.name
-              =link_to 'Edit', edit_genre_path(f), class: 'btn btn-default context-btn'
-              =link_to 'Destroy', genre_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
-              %hr.featurette-divider
+            %tr
+              %td= link_to f.name, genre_path(f)
+              %td=link_to 'Edit', edit_genre_path(f), class: 'btn btn-default context-btn'
+              %td=link_to 'Destroy', genre_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
