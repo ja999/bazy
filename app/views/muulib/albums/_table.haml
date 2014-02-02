@@ -8,6 +8,7 @@
             %td Date
             %td Format
             %td Rating
+            %td Genres
             %td Edit
             %td Destroy
           - albums.each do |f|
@@ -16,5 +17,8 @@
               %td= f.date
               %td= f.format
               %td= f.rating
+              %td
+                - f.genres.each do |g|
+                  = "\##{g.name}"
               %td=link_to 'Edit', edit_album_path(f), class: 'btn btn-default context-btn'
               %td=link_to 'Destroy', album_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
