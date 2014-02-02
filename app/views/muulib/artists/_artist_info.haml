@@ -1,41 +1,19 @@
-.container.album-show
-  .col-lg-4.well.well-lg
+.container.artist-show
+  .col-lg-8.well.well-lg
     .row
-      Title:
-      .pull-right= album.title
+      Name:
+      .pull-right= artist.name
     .row
-      Release date:
-      .pull-right= album.date
+      Established:
+      .pull-right= artist.established
     .row
-      Format:
-      .pull-right= album.format
+      Country:
+      .pull-right= artist.country
     .row
-      Rating:
-      .pull-right= "#{album.rating} / 10"
-    .row
-      Record label:
-      .pull-right= album.record_label.name if album.record_label.present?
-  .col-lg-4
-    %table{ class: 'table table-striped table-hover' }
-      %tr
-        %td No.
-        %td Title
-      - album.songs.order('number').each_with_index do |s, index|
-        - if index % 2 == 0
-          %tr
-            %td= s.number
-            %td= s.title
-  .col-lg-4
-    %table{ class: 'table table-striped table-hover' }
-      %tr
-        %td No.
-        %td Title
-      - album.songs.order('number').each_with_index do |s, index|
-        - if index % 2 == 1
-          %tr
-            %td= s.number
-            %td= s.title
-.container.album-desc
-  .col-lg-4.well.well-lg
-    = album.description
+      Albums:
+      - artist.albums.each do |al|
+        .pull-right= al.title
+.container.artist-desc
+  .col-lg-8.well.well-lg
+    = artist.description
 
