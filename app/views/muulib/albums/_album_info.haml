@@ -1,22 +1,22 @@
 .container.album-show
   .col-lg-4.well.well-lg
     .row
-      Title:
+      %b Title:
       .pull-right= album.title
     .row
-      Release date:
+      %b Release date:
       .pull-right= album.date
     .row
-      Format:
+      %b Format:
       .pull-right= album.format
     .row
-      Rating:
+      %b Rating:
       .pull-right= "#{album.rating} / 10"
     .row
-      Record label:
+      %b Record label:
       .pull-right= album.record_label.name if album.record_label.present?
     .row
-      Genres:
+      %b Genres:
       - album.genres.each do |g|
         .pull-right= g.name
   .col-lg-4
@@ -41,5 +41,6 @@
             %td= s.title
 .container.album-desc
   .col-lg-4.well.well-lg
+    %h4 Description
     = album.description
 

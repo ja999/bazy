@@ -8,4 +8,8 @@ class Song < ActiveRecord::Base
 
   belongs_to :album
   belongs_to :artist
+
+  def length
+    "#{self.min}:#{self.sec}"
+  end
 end
