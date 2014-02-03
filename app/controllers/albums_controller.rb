@@ -3,7 +3,7 @@ class AlbumsController < MuulibController
 
   expose :album
   expose :albums
-  expose(:songs_to_show){ Song.where(album_id: nil) || Song.where(album_id: album.songs) }
+  expose(:songs_to_show){ Song.where(album_id: nil) + Song.where(album_id: album.songs) }
 
   def index
   end
