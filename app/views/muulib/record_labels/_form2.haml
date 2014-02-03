@@ -4,10 +4,13 @@
       = f.input :name
   .row
     .col-lg-12
-      = f.input :established
+      = f.input :established, as: :date, start_year: Date.today.year - 500, end_year: Date.today.year, order: [ :day, :month, :year]
   .row
     .col-lg-12
-      = f.association :albums, collection: Album.all
+      = f.input :description, as: :text
+  .row
+    .col-lg-12
+      = f.association :albums, collection: albums_to_show
   .row
     .col-lg-12
       = f.submit 'Save', class: 'btn btn-default'

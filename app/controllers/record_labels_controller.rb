@@ -3,6 +3,7 @@ class RecordLabelsController < MuulibController
 
   expose :record_label
   expose :record_labels
+  expose(:albums_to_show){ Album.where(record_label_id: nil) + record_label.albums }
 
   def index
   end

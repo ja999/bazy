@@ -17,28 +17,33 @@
       .pull-right= album.record_label.name if album.record_label.present?
     .row
       %b Genres:
-      - album.genres.each do |g|
+    - album.genres.each do |g|
+      .row
         .pull-right= g.name
   .col-lg-4
     %table{ class: 'table table-striped table-hover' }
       %tr
         %td No.
         %td Title
+        %td Length
       - album.songs.order('number').each_with_index do |s, index|
         - if index % 2 == 0
           %tr
             %td= s.number
             %td= s.title
+            %td= s.length
   .col-lg-4
     %table{ class: 'table table-striped table-hover' }
       %tr
         %td No.
         %td Title
+        %td Length
       - album.songs.order('number').each_with_index do |s, index|
         - if index % 2 == 1
           %tr
             %td= s.number
             %td= s.title
+            %td= s.length
 .container.album-desc
   .col-lg-4.well.well-lg
     %h4 Description

@@ -13,8 +13,8 @@
       Rating:
       .pull-right= "#{song.rating} / 10"
     .row
-      aritst:
-      .pull-right= song.artist.name
+      Aritst:
+      .pull-right= song.artist.name if song.artist.present?
     .row
       Album:
-      .pull-right= song.album.title
+      .pull-right= song.album.title if song.album.present?
