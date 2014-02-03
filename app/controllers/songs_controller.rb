@@ -2,7 +2,7 @@ class SongsController < MuulibController
   prepend_view_path 'app/views/muulib'
 
   expose :song
-  expose :songs
+  expose(:songs){ params[:sort_by] ? Song.order(params[:sort_by]) : Song.order('created_at') }
 
   def index
   end

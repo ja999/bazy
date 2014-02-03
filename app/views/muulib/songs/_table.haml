@@ -4,10 +4,10 @@
       .panel-body
         %table{ class: 'table table-striped table-hover' }
           %tr
-            %td Title
-            %td Number
-            %td Length
-            %td Rating
+            %td= link_to 'Title', songs_path(sort_by: :title)
+            %td= link_to 'Number', songs_path(sort_by: :number)
+            %td= link_to 'Length', songs_path(sort_by: :min)
+            %td= link_to 'Rating', songs_path(sort_by: :rating)
             %td Edit
             %td Destroy
           - songs.each do |f|
@@ -16,5 +16,5 @@
               %td= f.number
               %td= "#{f.min}:#{f.sec}" if f.min.present? && f.sec.present?
               %td= f.rating
-              %td=link_to 'Edit', edit_song_path(f), class: 'btn btn-default context-btn'
-              %td=link_to 'Destroy', song_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
+              %td= link_to 'Edit', edit_song_path(f), class: 'btn btn-default context-btn'
+              %td= link_to 'Destroy', song_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
