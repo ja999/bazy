@@ -3,6 +3,8 @@ class Artist < ActiveRecord::Base
 
   validates :name, presence: true, length: { minimum: 2 }
 
+  acts_as_indexed fields: [:name, :description, :country]
+
   has_many :albums
   has_many :songs
 end

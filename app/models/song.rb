@@ -7,6 +7,8 @@ class Song < ActiveRecord::Base
   validates :number, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 100 }
   validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 10 }
 
+  acts_as_indexed fields: [:title, :number, :length]
+
   belongs_to :album
   belongs_to :artist
 
