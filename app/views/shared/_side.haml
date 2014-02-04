@@ -2,4 +2,4 @@
 	.list-group
 		= link_to "Index #{params[:controller]}", "/muulib/#{params[:controller]}", class: 'list-group-item'
 		= link_to "New #{params[:controller].singularize}", "/muulib/#{params[:controller]}/new", class: 'list-group-item'
-		= link_to "Search #{params[:controller]}", '#', class: 'list-group-item'
+		= link_to "Search #{params[:controller]}", '/', class: 'list-group-item'
