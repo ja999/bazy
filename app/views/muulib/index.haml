@@ -1,1 +1,36 @@
 = render partial: 'shared/header', locals: { active: 0 }
+.menu-offset
+.col-lg-2
+.col-lg-8
+  .row
+    %h2 Search MuuLib
+    = form_tag '/', method: :get, class: 'search' do
+      .col-lg-10
+        .row
+          = search_field_tag :search, params[:search], class: 'form-control search', placeholder: 'Search anything...'
+      .col-lg-2
+        .row
+          = button_tag 'search', name: nil, class: 'btn btn-success pull-left'
+          = link_to 'clear', '/', class: 'btn btn-success pull-left'
+  - if search_results.present?
+    .row
+      %h4 Results:
+      .col-lg-8
+        .well.well-lg
+          - search_results.each do |s|
+            .row
+              - if s.class == Album
+                Album
+                = link_to s.title, album_path(s)
+              - if s.class == Genre
+                Genre
+                = link_to s.name, genre_path(s)
+              - if s.class == RecordLabel
+                RecordLabel
+                = link_to s.name, record_label_path(s)
+              - if s.class == Artist
+                Artist
+                = link_to s.name, artist_path(s)
+              - if s.class == Song
+                Song
+                = link_to s.title, song_path(s)
