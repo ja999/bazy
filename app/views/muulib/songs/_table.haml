@@ -18,3 +18,10 @@
               %td= f.rating
               %td= link_to 'Edit', edit_song_path(f), class: 'btn btn-default context-btn'
               %td= link_to 'Destroy', song_path(f), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default context-btn'
+  .row
+    .col-lg-6
+      .row
+        %h4.well
+          Approx. length:
+          = songs.first.connection.select_one('select sum_len()')["sum_len()"]
+          minutes
