@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140202224819) do
+ActiveRecord::Schema.define(:version => 20140204024257) do
 
   create_table "albums", :force => true do |t|
     t.string   "title",           :null => false
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20140202224819) do
     t.integer  "artist_id"
     t.integer  "record_label_id"
   end
+
+  add_index "albums", ["artist_id"], :name => "artist_id_ix"
 
   create_table "albums_genres", :id => false, :force => true do |t|
     t.integer "genre_id"
@@ -64,5 +66,7 @@ ActiveRecord::Schema.define(:version => 20140202224819) do
     t.integer  "sec"
     t.integer  "min"
   end
+
+  add_index "songs", ["album_id"], :name => "album_id_ix"
 
 end
